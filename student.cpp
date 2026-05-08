@@ -94,10 +94,12 @@ void Student::print() {
     cout << "Last Name: " << lastName << "\t";
     cout << "Email: " << email << "\t";
     cout << "Age: " << age << "\t";
-    cout << "Days:  {"
+    cout << "Days In Course:  {"
     << daysInCourse[0] << ", "
     << daysInCourse[1] << ", "
     << daysInCourse[2] << "} ";
+    
+    cout << "Degree Program: ";
     
     switch (degreeProgram) {
         case SECURITY:
@@ -116,6 +118,3 @@ void Student::print() {
 }
 
                 
-        }
-    }
-}
