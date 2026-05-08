@@ -102,6 +102,18 @@ void Roster::printAverageDaysInCourse(string StudentID) {
 }
 
 //
+// Print by degree program
+//
+
+void Roster::printByDegreeProgram(DegreeProgram degreeProgram) {
+    for (int i = 0; i <= lastIndex; i++) {
+        if (classRosterArray[i]->getDegreeProgram() == degreeProgram) {
+            classRosterArray[i]->print();
+        }
+    }
+}
+
+//
 // Destructor
 //
 
