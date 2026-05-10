@@ -7,6 +7,8 @@
 
 #include "student.h"
 #include <iostream>
+#include <iomanip>
+
 using namespace std;
 
 Student::Student(string id, string first, string last, string email,
@@ -89,17 +91,17 @@ void Student::setDegreeProgram(DegreeProgram degree) {
 //
 
 void Student::print() {
-    cout << StudentID << "\t";
-    cout << "First Name: " << firstName << "\t";
-    cout << "Last Name: " << lastName << "\t";
-    cout << "Email: " << email << "\t";
-    cout << "Age: " << age << "\t";
-    cout << "Days In Course: {"
-    << daysInCourse[0] << ", "
-    << daysInCourse[1] << ", "
-    << daysInCourse[2] << "} ";
-    
-    cout << "Degree Program: ";
+    cout << StudentID << "\t"
+             << "First Name: " << firstName << "\t"
+             << "Last Name: " << lastName << "\t"
+             << "Email: " << email << "\t\t\t"
+             << "Age: " << age << "\t"
+             << "Days In Course: {"
+             << daysInCourse[0] << ", "
+             << daysInCourse[1] << ", "
+             << daysInCourse[2] << "} "
+             << "Degree Program: ";
+
     
     switch (degreeProgram) {
         case SECURITY:

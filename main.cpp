@@ -31,7 +31,7 @@ int main() {
         "A2,Suzan,Erickson,Erickson_1990@gmailcom,19,50,30,40,NETWORK",
         "A3,Jack,Napoli,The_lawyer99yahoo.com,19,20,40,33,SOFTWARE",
         "A4,Erin,Black,Erin.black@comcast.net,22,50,58,40,SECURITY",
-        "A5,Aliyah,Jackson,email@email.com,24,50,60,46,SOFTWARE"
+        "A5,Aliyah,Jackson,ajack363@wgu.edu,24,50,60,46,SOFTWARE"
            };
     
     //
@@ -103,12 +103,14 @@ int main() {
         //
         
         classRoster.printAll();
+    cout << endl;
         
         //
         // Print invalid emails
         //
         
         classRoster.printInvalidEmails();
+    cout << endl;
         
         //
         // Print average days
@@ -118,30 +120,36 @@ int main() {
             classRoster.printAverageDaysInCourse("A" + to_string(i));
             
         }
+    
+    cout << endl;
         
         //
         // Print software students
         //
         
         classRoster.printByDegreeProgram(SOFTWARE);
+    cout << endl;
         
         //
         // Remove A3
         //
         
         classRoster.remove("A3");
+    cout << endl;
         
         //
         // Print all again
         //
         
         classRoster.printAll();
+    cout << endl;
         
         //
         // Remove A3 again
         //
         
         classRoster.remove("A3");
+    cout << endl;
         
         return 0;
     }
