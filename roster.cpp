@@ -114,6 +114,14 @@ void Roster::printByDegreeProgram(DegreeProgram degreeProgram) {
 }
 
 //
+// Constructor
+//
+
+Roster::Roster() {
+    lastIndex = -1;
+}
+
+//
 // Destructor
 //
 
@@ -122,19 +130,5 @@ Roster::~Roster() {
         delete classRosterArray[i];
         classRosterArray[i] = nullptr;
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-        }
-    }
 }
+
