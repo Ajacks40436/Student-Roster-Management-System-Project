@@ -31,3 +31,5 @@ Modular program architecture (separate header/source files)
 1. Clone the repository
 2. Open the project in your C++ IDE (Visual Studio / VS Code / CLion)
 3. Build and run `main.cpp`
+![Program Output](images/Output.png)
+
