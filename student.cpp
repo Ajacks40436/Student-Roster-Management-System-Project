@@ -1,53 +1,36 @@
-//
-//  student.cpp
-//  C867 Project
-//
-//  Created by Aliyah Jackson
-//
-
 #include "student.h"
 #include <iostream>
-#include <iomanip>
 
 using namespace std;
 
-Student::Student(string id, string first, string last, string email,
-                 int age, int d1, int d2, int d3, DegreeProgram degree) {
-    StudentID = id;
+Student::Student() {}
+
+Student::Student(string id, string first, string last,
+                 string mail, int a,
+                 int d1, int d2, int d3,
+                 DegreeProgram degree) {
+
+    studentID = id;
     firstName = first;
     lastName = last;
-    this->email = email;
-    this->age = age;
+    email = mail;
+    age = a;
+
     daysInCourse[0] = d1;
     daysInCourse[1] = d2;
     daysInCourse[2] = d3;
-    
+
     degreeProgram = degree;
-    
 }
 
-//
-// Getters
-//
+Student::~Student() {}
 
 string Student::getStudentID() {
-    return StudentID;
-}
-
-string Student::getFirstName() {
-    return firstName;
-}
-
-string Student::getLastName() {
-    return lastName;
+    return studentID;
 }
 
 string Student::getEmail() {
     return email;
-}
-
-int Student::getAge() {
-    return age;
 }
 
 int* Student::getDaysInCourse() {
@@ -58,65 +41,23 @@ DegreeProgram Student::getDegreeProgram() {
     return degreeProgram;
 }
 
-//
-// Setters
-//
-
 void Student::setStudentID(string id) {
-    StudentID = id;
+    studentID = id;
 }
-
-void Student::setFirstName(string first) {
-    firstName = first;
-}
-
-void Student::setLastName(string last) {
-    lastName = last;
-}
-
-void Student::setEmail(string email) {
-    this->email = email;
-}
-
-void Student::setAge(int age) {
-    this->age = age;
-}
-
-void Student::setDegreeProgram(DegreeProgram degree) {
-    degreeProgram = degree;
-}
-
-//
-// Print
-//
 
 void Student::print() {
-    cout << StudentID << "\t"
-             << "First Name: " << firstName << "\t"
-             << "Last Name: " << lastName << "\t"
-             << "Email: " << email << "\t\t\t"
-             << "Age: " << age << "\t"
-             << "Days In Course: {"
-             << daysInCourse[0] << ", "
-             << daysInCourse[1] << ", "
-             << daysInCourse[2] << "} "
-             << "Degree Program: ";
+    cout << studentID << "\t"
+         << firstName << "\t"
+         << lastName << "\t"
+         << email << "\t"
+         << age << "\t{"
+         << daysInCourse[0] << ", "
+         << daysInCourse[1] << ", "
+         << daysInCourse[2] << "}\t";
 
-    
-    switch (degreeProgram) {
-        case SECURITY:
-            cout << "SECURITY";
-            break;
-        case NETWORK:
-            cout << "NETWORK";
-            break;
-        case SOFTWARE:
-            cout << "SOFTWARE";
-            break;
-    }
-    
+    if (degreeProgram == SECURITY) cout << "SECURITY";
+    else if (degreeProgram == NETWORK) cout << "NETWORK";
+    else cout << "SOFTWARE";
+
     cout << endl;
-    
 }
-
-                
