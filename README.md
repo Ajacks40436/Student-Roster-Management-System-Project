@@ -26,3 +26,8 @@ Pointer-based memory management
 Dynamic array management
 String parsing and validation logic
 Modular program architecture (separate header/source files)
+
+## How to Run
+1. Clone the repository
+2. Open the project in your C++ IDE (Visual Studio / VS Code / CLion)
+3. Build and run `main.cpp`
